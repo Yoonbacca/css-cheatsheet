@@ -15,31 +15,34 @@
         <h1>CSS Snippet Cheatsheet</h1>
         <p>Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all the code you copy</p>
     </header>
-    <section>
+    <section id="snippet-grid">
     <!-- Each snippet will have identical CSS rules for efficiency-->
         <div class="snippet">
-            <header class="snippet-title">Flexbox Row</header>
+            <h2 class="snippet-title">Flexbox Row</h2>
             <p class="snippet-blurb">Use these three properties to create a Flexbox row layout.</p>
-            <pre class="snippet-code"><code>                .row {
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                }
-            </code></pre>
+            <pre class="snippet-code"><code>     
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        </code></pre>
         </div>
         <div class="snippet">
-            <header class="snippet-title">Flexbox Column</header>
+            <h2 class="snippet-title">Flexbox Column</h2>
             <p class="snippet-blurb">Use this to create a Flexbox column layout.</p>
-            <pre class="snippet-code"><code>                .column {
+            <pre class="snippet-code"><code>                
+                .column {
                     display: flex;
                     flex-direction: column;
                 }
             </code></pre>
         </div>
         <div class="snippet">
-            <header class="snippet-title">CSS Grid Layout</header>
+            <h2 class="snippet-title">CSS Grid Layout</h2>
             <p class="snippet-blurb">Build a 12-column layout using CSS Grid.</p>
-            <pre class="snippet-code"><code>                .grid {
+            <pre class="snippet-code"><code>                
+                .grid {
                     display: grid;
                     width: 100%;
                     grid-template-columns:
@@ -48,27 +51,27 @@
             </code></pre>
         </div>
         <div class="snippet">
-            <header class="snippet-title">Linear Gradients</header>
+            <h2 class="snippet-title">Linear Gradients</h2>
             <p class="snippet-blurb">This will create a background linear gradient from top to bottom.</p>
-            <pre class="snippet-code"><code>                .linear-gradient-background {
-                    background-image: linear-
+            <pre class="snippet-code"><code>                
+            .linear-gradient-background {
+                background-image: linear-
                 gradient (
                     rgba(232,102, 236, 0.3) 0%
-                    rgba(232,102, 236, 0.6)
-                100%
-                    );
+                    rgba(232,102, 236, 0.6) 
+                    100% );
                 }
             </code></pre>
         </div>
         <div class="snippet">
-            <header class="snippet-title">Box Transition Glow</header>
+            <h2 class="snippet-title">Box Transition Glow</h2>
             <p class="snippet-blurb">Use transition and box shadows to glow on hover.</p>
-            <pre class="snippet-code"><code>                .code-card .card-header {
+            <pre class="snippet-code"><code>                
+                .code-card .card-header {
                     border-radius: 8px;
-                    transition: all 0.5s ease-in-
-                out;
+                    transition: all 0.5s 
+                    ease-in-out;
                 }
-
                 .code-card:hover,
                 .code-card:hover .card-header {
                     box-shadow: inset 0px 0px 8px
@@ -78,9 +81,10 @@
             </code></pre>
         </div>
         <div class="snippet">
-            <header class="snippet-title">Overlay Card with Title</header>
+            <h2 class="snippet-title">Overlay Card with Title</h2>
             <p class="snippet-blurb">Use position properties and negative margins to raise elements higher than their natural starting point.</p>
-            <pre class="snippet-code"><code>                .card-header {
+            <pre class="snippet-code"><code> 
+                .card-header {
                     position: relative;
                     margin-top: -20px;
                 }
