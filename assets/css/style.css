@@ -1,7 +1,4 @@
 /* Acceptance Criteria:
-    Flexbox and media queries to create a responsive grid layout.
-    Each CSS snippet should have a card-like layout with the CSS syntax wrapped in an HTML pre element.
-    Each CSS snippet can easily be highlighted for copying on click using the CSS user-select property.
     Must incorporate a background color using a CSS linear-gradient function.
     Must incorporate a bit of animation using the CSS transition property.
     At size 992px and above, the app should show snippets in 3x2 grid
@@ -13,30 +10,110 @@
 :root {
     --dark: #24292f;
     --light: #fff;
-    --highlight: #388bfd;
+    --highlight: rgba(232,102, 236, 0.6);
+    --blue-code: 
 }
 
-* {
+html {
     background-color: var(--dark);
     color: var(--light);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient (#e66465, #9198e5);
 }
 
 body {
     display: flex;
     flex-direction: column;
+    font-size: 16px;
+    margin: 0px;
+    line-height: 1.3;
 }
 
-#header h1,
-.snippet-title,
+h1,
+h2,
 .snippet-blurb,
 #footer p {
     color: var(--highlight);
+    text-align: center;
 }
 
-.snippet-code code {
-    background-color: var(--highlight);
-    color: var(--light);
+.snippet-code code{
+    background-image: linear-gradient (#e66465, #9198e5);
 }
 
+/* Header */
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    margin: 1rem;
 
+}
+
+#header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0.75rem;
+
+}
+
+#header p {
+    text-align: center;
+}
+
+/* Flexbox and media queries to create a responsive grid layout.
+Each CSS snippet should have a card-like layout with the CSS syntax wrapped in an HTML pre element.
+Each CSS snippet can easily be highlighted for copying on click using the CSS user-select property. */
+
+/* Snippets */
+#snippet-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    margin: 1rem;
+    justify-content: space-around;
+}
+
+.snippet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    border: var(--light);
+    border-style: dashed;
+    border-width: 3px;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.snippet-title {
+    margin-top: -40px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--light);
+    background-color: var(--dark);
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    position: relative;
+    flex: 0 1 auto;
+    width: 90%;
+}
+
+.snippet-blurb {
+    padding: 1rem;
+}
+
+.snippet-code {
+    background: linear-gradient(#e66465, var(--highlight));
+    padding-right: 1.5rem;
+    border-radius: 25px;
+    margin: 0.5rem;
+    width: 90%;
+    height: 90%;
+    align-content: center;
+    justify-content: center;
+}
