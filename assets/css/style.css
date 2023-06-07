@@ -1,0 +1,42 @@
+/* Acceptance Criteria:
+    Flexbox and media queries to create a responsive grid layout.
+    Each CSS snippet should have a card-like layout with the CSS syntax wrapped in an HTML pre element.
+    Each CSS snippet can easily be highlighted for copying on click using the CSS user-select property.
+    Must incorporate a background color using a CSS linear-gradient function.
+    Must incorporate a bit of animation using the CSS transition property.
+    At size 992px and above, the app should show snippets in 3x2 grid
+    At size 768px and above, the app should show snippets in 2x3 grid
+    On mobile devices, anything under 768px, the app should show snippets in 1x6 grid
+*/
+
+/* Clean and reusable values for a color scheme. */
+:root {
+    --dark: #24292f;
+    --light: #fff;
+    --highlight: #388bfd;
+}
+
+* {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#header h1,
+.snippet-title,
+.snippet-blurb,
+#footer p {
+    color: var(--highlight);
+}
+
+.snippet-code code {
+    background-color: var(--highlight);
+    color: var(--light);
+}
+
+
